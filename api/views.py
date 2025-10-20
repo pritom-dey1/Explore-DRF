@@ -126,9 +126,10 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     
     
     
-class BlogViewSet(generics.ListCreateAPIView):
+class BlogViewSet(viewsets.ModelViewSet):
     queryset = Blog.objects.all()
     serializer_class = BlogSerializer
-class CommentViewSet(generics.ListCreateAPIView):
+
+class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
